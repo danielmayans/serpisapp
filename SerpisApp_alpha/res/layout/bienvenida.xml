@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="170dp"
+        android:background="@drawable/front_secretaria" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignTop="@+id/text_informacion"
+        android:layout_toLeftOf="@+id/text_informacion"
+        android:src="@drawable/l_arrow" />
+
+    <TextView
+        android:id="@+id/text_informacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:text="Información"
+        android:textSize="13dp"
+        android:textColor="#2E9AFE" />
+
+    <TextView
+        android:id="@+id/text_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="IES Serpis"
+        android:textSize="30dp"
+        android:textColor="@color/blanco" />
+
+    <TextView
+        android:id="@+id/text_subtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_titulo"
+        android:layout_centerHorizontal="true"
+        android:text="Centro de Enseñanza Secundaria"
+        android:textSize="44dp"
+        android:textColor="@color/turquesa" />
+
+    </RelativeLayout>

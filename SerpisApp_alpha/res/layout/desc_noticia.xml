@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:orientation="vertical"
+  android:background="@drawable/fondo">
+  
+	<TextView android:id="@+id/LblTitulo" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content" 
+		android:textStyle="bold" 
+		android:textSize="16dp"
+		android:textColor="@color/turquesa" />
+
+	<TextView
+	    android:id="@+id/LblSubTitulo"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:layout_below="@+id/LblTitulo"
+	    android:textSize="12dp"
+	    android:textStyle="normal"
+	    android:textColor="@color/blanco" />
+	
+</RelativeLayout>

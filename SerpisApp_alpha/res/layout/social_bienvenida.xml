@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="124dp"
+        android:background="@drawable/logo_social"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/linearLayout1"
+        android:orientation="vertical"
+        android:background="@drawable/fondo" >
+
+        <TextView
+            android:id="@+id/texto_prueba"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="IES Serpis"
+            android:textColor="@color/blanco"
+            android:gravity="bottom"
+            android:textSize="100dp" />
+
+        <TextView
+            android:id="@+id/texto_prueba1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="90dp"
+            android:text="SOCIAL"
+            android:textColor="@color/turquesa"
+            android:textSize="60dp" />
+
+        <Button
+            android:id="@+id/b_entrar"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/texto_prueba1"
+            android:layout_centerHorizontal="true"
+            android:text="ENTRAR" />
+        
+    </RelativeLayout>
+	
+</RelativeLayout>

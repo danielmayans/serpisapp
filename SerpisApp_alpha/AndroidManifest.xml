@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.serpisapp_alpha"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="8" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.serpisapp_alpha.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="social.serpisapp_alpha.Tablon" android:label="IES Serpis - Tablon"></activity>
+        <activity android:name="social.serpisapp_alpha.NuevoMensaje" android:label="IES Serpis - Nuevo Mensaje"></activity>
+        <activity android:name="social.serpisapp_alpha.DetallesMensaje" android:label="Edicion mensaje"></activity>
+        <activity android:name="social.serpisapp_alpha.Social_inicio" android:label="IES Serpis - Social"></activity>
+        <activity android:label="IES Serpis - Bienvenid@" android:name="social.serpisapp_alpha.Social_bienvenida"></activity>
+        <activity android:name="noticias.serpisapp_alpha.NoticiasMain" android:label="IES Serpis - Noticias"></activity>
+        <activity android:name="noticias.serpisapp_alpha.Descripcion" android:label="IES Serpis - Noticias"></activity>
+    </application>
+
+</manifest>

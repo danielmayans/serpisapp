@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SerpisApp_alpha</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string-array name="cursos">
+        <item>SMR</item>
+        <item>ASIR</item>
+        <item>DAM</item>
+    </string-array>
+    <color name="blanco">#FFFFFF</color>
+    <color name="turquesa">#7bb1bd</color>
+
+</resources>
