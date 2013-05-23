@@ -2,6 +2,7 @@ package noticias.serpisapp_alpha;
 
 import java.util.List;
 
+
 import com.example.serpisapp_alpha.R;
 
 import android.app.Activity;
@@ -60,26 +61,6 @@ public class NoticiasMain extends Activity
 	    	super.onCreate(savedInstanceState);
 	        setContentView(R.layout.noticias);
 	        
-	        //SAX Clásico
-	        //RssParserSax saxparser = new RssParserSax("http://212.170.237.10/rss/rss.aspx");
-	        //@SuppressWarnings("unused")
-			//List<Noticia> noticias = saxparser.parse();
-	        
-	        //SAX Simplificado
-	        //RssParserSax2 saxparser = new RssParserSax2("http://212.170.237.10/rss/rss.aspx");
-	        //@SuppressWarnings("unused")
-			//List<Noticia> noticias = saxparser.parse();
-	        
-	        //DOM
-	        //RssParserDom saxparser = new RssParserDom("http://212.170.237.10/rss/rss.aspx");
-			//@SuppressWarnings("unused")
-			//List<Noticia> noticias = saxparser.parse();
-			
-			//XMLPULL
-//	        for(int i=0; i<=5; i++)
-//	            datos[i] = new Titular("hola","adios");
-//	        
-	        
 			
 	        AdaptadorTitulares adaptador = 
 	        	new AdaptadorTitulares(this);
@@ -110,8 +91,8 @@ public class NoticiasMain extends Activity
 				final TextView lblTitulo = (TextView)item.findViewById(R.id.LblTitulo);
 				lblTitulo.setText(datos[position].getTitulo());
 				
-				final TextView lblSubtitulo = (TextView)item.findViewById(R.id.LblSubTitulo);
-				lblSubtitulo.setText(datos[position].getSubtitulo());
+//				final TextView lblSubtitulo = (TextView)item.findViewById(R.id.LblSubTitulo);
+//				lblSubtitulo.setText(datos[position].getSubtitulo());
 								
 				item.setOnClickListener(new OnClickListener() {
 				    @Override

@@ -13,22 +13,11 @@
         android:visibility="gone" />
 
     <!-- Name Label -->
-
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:src="@drawable/ic_launcher" />
-
     <TextView
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_alignRight="@+id/imageView1"
-        android:layout_below="@+id/imageView1"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textSize="12dip" />
 
@@ -36,11 +25,11 @@
         android:id="@+id/comentario"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/imageView1"
-        android:paddingLeft="6dip"
+        android:layout_below="@+id/name"
+        android:paddingLeft="10dip"
         android:paddingTop="6dip"
         android:textSize="17dip"
         android:textStyle="bold" />
+
 
 </RelativeLayout>

@@ -26,7 +26,7 @@
 	    android:orientation="horizontal">
 	    <!-- Button Create Product -->
 	<Button android:id="@+id/btnAtras" 
-	    android:layout_width="fill_parent"
+	    android:layout_width="0dip"
 	    android:layout_height="wrap_content"
 	    android:text="Volver al Tablon"
 	    android:layout_weight="1"/>   

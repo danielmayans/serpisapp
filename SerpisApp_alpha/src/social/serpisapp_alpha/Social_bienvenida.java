@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -26,7 +27,7 @@ public class Social_bienvenida extends Activity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.social_bienvenida);
 		
-		final SharedPreferences prefs = getSharedPreferences("MisPreferencias",Context.MODE_PRIVATE);
+		final SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(Social_bienvenida.this);
 		
 		Typeface face=Typeface.createFromAsset(getAssets(),"fonts/ByPeopleHandwritten.ttf");
 		
@@ -40,7 +41,7 @@ public class Social_bienvenida extends Activity{
 			
 			@Override
 			public void onClick(View v) {
-				if(prefs.getString("NOMBRE", "")==""){
+				if(pref.getString("pref_nombre", "")==""){
 					Intent i = new Intent(getApplicationContext(), social.serpisapp_alpha.Social_inicio.class);
 					finish();
 					startActivity(i);

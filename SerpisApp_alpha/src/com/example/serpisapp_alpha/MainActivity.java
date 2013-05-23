@@ -15,6 +15,7 @@ public class MainActivity extends FragmentActivity {
 	
 	private ImageButton bSocial;
 	private ImageButton bNoticias;
+	private ImageButton bAgenda;
 	
 	
 	@Override
@@ -45,6 +46,18 @@ public class MainActivity extends FragmentActivity {
 			@Override
 			public void onClick(View arg0) {
 				Intent i = new Intent(getApplicationContext(), noticias.serpisapp_alpha.NoticiasMain.class);
+				finish();
+				startActivity(i);
+				
+			}
+		});
+		
+		bAgenda = (ImageButton) findViewById(R.id.imageButton1);
+		bAgenda.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent i = new Intent(getApplicationContext(), agenda.serpisapp_alpha.Agenda.class);
 				finish();
 				startActivity(i);
 				

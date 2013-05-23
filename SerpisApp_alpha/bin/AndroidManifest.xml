@@ -25,11 +25,14 @@
         </activity>
         <activity android:name="social.serpisapp_alpha.Tablon" android:label="IES Serpis - Tablon"></activity>
         <activity android:name="social.serpisapp_alpha.NuevoMensaje" android:label="IES Serpis - Nuevo Mensaje"></activity>
-        <activity android:name="social.serpisapp_alpha.DetallesMensaje" android:label="Edicion mensaje"></activity>
+        <activity android:name="social.serpisapp_alpha.DetallesMensaje" android:label="IES Serpis - Social"></activity>
         <activity android:name="social.serpisapp_alpha.Social_inicio" android:label="IES Serpis - Social"></activity>
         <activity android:label="IES Serpis - Bienvenid@" android:name="social.serpisapp_alpha.Social_bienvenida"></activity>
         <activity android:name="noticias.serpisapp_alpha.NoticiasMain" android:label="IES Serpis - Noticias"></activity>
         <activity android:name="noticias.serpisapp_alpha.Descripcion" android:label="IES Serpis - Noticias"></activity>
+        <activity android:label="IES Serpis - Agenda" android:name="agenda.serpisapp_alpha.Agenda"></activity>
+        <activity android:label="IES Serpis - Editar nota" android:name="agenda.serpisapp_alpha.NoteEdit"></activity>
+        <activity android:label="IES Serpis - Notas" android:name="agenda.serpisapp_alpha.Notepad"></activity>
     </application>
 
 </manifest>

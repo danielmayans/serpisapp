@@ -16,14 +16,16 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class DetallesMensaje extends Activity {
 
-	EditText txtName;
-	EditText txtMsj;
+	TextView txtName;
+	TextView txtMsj;
 	EditText txtCreatedAt;
 	Button btnAtras;
 	String pid;
@@ -37,8 +39,8 @@ public class DetallesMensaje extends Activity {
 	private static final String TAG_SUCCESS = "success";
 	private static final String TAG_MESSAGE = "message";
 	private static final String TAG_PID = "pid";
-	private static final String TAG_NAME = "name";
-	private static final String TAG_DESCRIPTION = "description";
+	private static final String TAG_NAME = "nombre";
+	private static final String TAG_DESCRIPTION = "mensaje";
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -50,7 +52,8 @@ public class DetallesMensaje extends Activity {
 		Intent i = getIntent();
 		
 		pid = i.getStringExtra(TAG_PID);
-
+		Log.i("pID - getExtra ", pid);
+		
 		new GetProductDetails().execute();
 
 		btnAtras.setOnClickListener(new View.OnClickListener() {
@@ -100,20 +103,21 @@ public class DetallesMensaje extends Activity {
 
 						success = json.getInt(TAG_SUCCESS);
 						if (success == 1) {
-
-							JSONArray productObj = json
-									.getJSONArray(TAG_MESSAGE);
+							Log.i("TAG_SUCCESS - desdeJson ", "SUCCESS = 1" );
+							
+							JSONArray productObj = json.getJSONArray(TAG_MESSAGE);
 							
 							JSONObject product = productObj.getJSONObject(0);
 
-							txtName = (EditText) findViewById(R.id.inputName);
-							txtMsj = (EditText) findViewById(R.id.inputDesc);
-
+							txtName = (TextView) findViewById(R.id.inputName);
+							txtMsj = (TextView) findViewById(R.id.inputDesc);
+							Log.i("TAG_NAME - desdeJson ", product.getString(TAG_NAME) );
+							Log.i("TAG_DESCRIPTION - desdeJson ", product.getString(TAG_DESCRIPTION) );
 							txtName.setText(product.getString(TAG_NAME));
 							txtMsj.setText(product.getString(TAG_DESCRIPTION));
 
 						}else{
-
+							Log.i("TAG_SUCCESS - desdeJson ", "SUCCESS = 0 " );
 						}
 					} catch (JSONException e) {
 						e.printStackTrace();

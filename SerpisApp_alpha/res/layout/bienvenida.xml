@@ -3,7 +3,7 @@
         android:id="@+id/tv"
         android:layout_width="wrap_content"
         android:layout_height="170dp"
-        android:background="@drawable/front_secretaria" >
+        android:background="@drawable/pattern_036">
 
     <ImageView
         android:id="@+id/imageView1"
@@ -43,5 +43,4 @@
         android:text="Centro de Enseñanza Secundaria"
         android:textSize="44dp"
         android:textColor="@color/turquesa" />
-
     </RelativeLayout>

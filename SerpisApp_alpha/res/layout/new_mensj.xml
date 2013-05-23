@@ -15,7 +15,8 @@
 	
 	
     <!-- Input description -->
-	<EditText android:id="@+id/input_msj" 
+	<EditText android:id="@+id/input_msj"
+	    android:hint="Escribe tu mensaje"
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
 	    android:layout_margin="5dip"

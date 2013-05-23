@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -14,9 +15,15 @@ import com.example.serpisapp_alpha.R;
 import android.app.ListActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
+import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -27,13 +34,14 @@ import android.widget.TextView;
 
 public class Tablon extends ListActivity {
 	
-
+	
 	// Progress Dialog
 	private ProgressDialog pDialog;
-
+	
 	// Creando el objeto JSON Parser
 	JSONParser jParser = new JSONParser();
-
+	JSONParser jsonParser = new JSONParser();
+	
 	ArrayList<HashMap<String, String>> listaMensajes;
 
 	// URL para consultar todos los mensajes del tablon
@@ -43,9 +51,10 @@ public class Tablon extends ListActivity {
 	private static final String TAG_SUCCESS = "success";
 	private static final String TAG_MESSAGES = "messages";
 	private static final String TAG_PID = "pid";
-	private static final String TAG_DESCRIPTION = "description";
-	private static final String TAG_NAME ="name";
-
+	private static final String TAG_DESCRIPTION = "mensaje";
+	private static final String TAG_NAME = "nombre";
+	private static final String TAG_APELLIDO1 = "ap1";
+	String curso;
 	// JSONArray
 	JSONArray messages = null;
 
@@ -56,33 +65,9 @@ public class Tablon extends ListActivity {
 		
 		// Hashmap para el ListView
 		listaMensajes = new ArrayList<HashMap<String, String>>();
-
+		
 		// Cargando los mensajes con Background Thread
 		new CargaMensajes().execute();
-		
-
-		// Get listview
-		ListView lv = getListView();
-
-		
-		// Lanzando los detalles del mensaje
-		lv.setOnItemClickListener(new OnItemClickListener() {
-
-			@Override
-			public void onItemClick(AdapterView<?> parent, View view,
-					int position, long id) {
-
-				String pid = ((TextView) view.findViewById(R.id.pid)).getText()
-						.toString();
-				Intent in = new Intent(getApplicationContext(),
-						DetallesMensaje.class);
-				
-				in.putExtra(TAG_PID, pid);
-				
-				// Se lanza la actividad y se espera una respuesta
-				startActivityForResult(in, 100);
-			}
-		});
 
 	}
 	 public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -131,9 +116,12 @@ public class Tablon extends ListActivity {
 		 * Sacando los mensajes de la URL
 		 * */
 		protected String doInBackground(String... args) {
-
+			SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(Tablon.this);
+			
 			List<NameValuePair> params = new ArrayList<NameValuePair>();
-
+			params.add(new BasicNameValuePair("curso", pref.getString("pref_curso", "")));
+			
+			
 			JSONObject json = jParser.makeHttpRequest(url_tablon, "GET", params);
 			
 
@@ -151,9 +139,9 @@ public class Tablon extends ListActivity {
 						JSONObject c = messages.getJSONObject(i);
 
 						String id = c.getString(TAG_PID);
-						String name = c.getString(TAG_NAME);
+						String name = c.getString(TAG_NAME)+" "+c.getString(TAG_APELLIDO1);
 						String description = c.getString(TAG_DESCRIPTION);
-
+						
 						HashMap<String, String> map = new HashMap<String, String>();
 
 						map.put(TAG_PID, id);
@@ -191,8 +179,7 @@ public class Tablon extends ListActivity {
 					 * */
 					ListAdapter adapter = new SimpleAdapter(
 							Tablon.this, listaMensajes,
-							R.layout.list_item, new String[] { TAG_PID,TAG_NAME,
-									TAG_DESCRIPTION},
+							R.layout.list_item, new String[] { TAG_PID,TAG_NAME,TAG_DESCRIPTION},
 							new int[] { R.id.pid, R.id.name, R.id.comentario });
 
 					setListAdapter(adapter);
@@ -202,4 +189,24 @@ public class Tablon extends ListActivity {
 		}
 
 	}
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getMenuInflater().inflate(R.menu.menu_new_msj, menu);
+		return true;
+	}
+	
+	public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+        case R.id.m_new_msj:
+        	Intent intent = new Intent(getApplicationContext(), NuevoMensaje.class);
+        	intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        	startActivity(intent);
+        	break;
+        case R.id.m_act_tablon:
+//        	Intent i = new Intent(getApplicationContext(), Tablon.class);
+//			finish();
+//			startActivity(i);
+        	break;
+    	}        
+        return true;
+        }
 }

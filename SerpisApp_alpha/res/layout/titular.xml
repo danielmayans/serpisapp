@@ -1,26 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  android:layout_width="wrap_content"
-  android:layout_height="wrap_content"
-  android:orientation="vertical"
-    android:background="@drawable/fondo">
-  
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#000000" >
+    
 <TextView android:id="@+id/LblTitulo" 
-	android:layout_width="fill_parent" 
+	android:layout_width="wrap_content" 
 	android:layout_height="wrap_content" 
 	android:textStyle="bold" 
-	android:textSize="16dp"
-	android:maxLength="45"
-	android:textColor="@color/turquesa" />
+	android:textSize="16sp"
+	android:maxLength="45" />
 	
 <TextView android:id="@+id/LblSubTitulo" 
-	android:layout_width="fill_parent" 
+	android:layout_width="wrap_content" 
 	android:layout_height="wrap_content" 
 	android:textStyle="normal" 
-	android:textSize="12dp"
-	android:maxLength="45"
-	android:textColor="@color/blanco" />
-	
+	android:textSize="12sp"
+	android:maxLength="45" />
 </LinearLayout>
