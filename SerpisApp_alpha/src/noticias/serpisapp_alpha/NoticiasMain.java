@@ -32,6 +32,7 @@ public class NoticiasMain extends Activity
 				subtitulo = sub;
 			}
 			
+			
 			public String getTitulo(){
 				return titulo;
 			}
@@ -49,12 +50,12 @@ public class NoticiasMain extends Activity
 		
 		final List<Noticia> noticias = saxparser.parse();
 		Titular[] datos = new Titular[]{
-			new Titular(noticias.get(0).getTitulo(),noticias.get(0).getDescripcion()),
-			new Titular(noticias.get(1).getTitulo(),noticias.get(1).getDescripcion()),
-			new Titular(noticias.get(2).getTitulo(),noticias.get(2).getDescripcion()),
-			new Titular(noticias.get(3).getTitulo(),noticias.get(3).getDescripcion()),
-			new Titular(noticias.get(4).getTitulo(),noticias.get(4).getDescripcion()),
-			new Titular(noticias.get(5).getTitulo(),noticias.get(5).getDescripcion())};
+			new Titular(noticias.get(0).getTitulo(),noticias.get(0).getFecha()),
+			new Titular(noticias.get(1).getTitulo(),noticias.get(1).getFecha()),
+			new Titular(noticias.get(2).getTitulo(),noticias.get(2).getFecha()),
+			new Titular(noticias.get(3).getTitulo(),noticias.get(3).getFecha()),
+			new Titular(noticias.get(4).getTitulo(),noticias.get(4).getFecha()),
+			new Titular(noticias.get(5).getTitulo(),noticias.get(5).getFecha())};
 		
 	    @Override
 	    public void onCreate(Bundle savedInstanceState) {
@@ -91,9 +92,9 @@ public class NoticiasMain extends Activity
 				final TextView lblTitulo = (TextView)item.findViewById(R.id.LblTitulo);
 				lblTitulo.setText(datos[position].getTitulo());
 				
-//				final TextView lblSubtitulo = (TextView)item.findViewById(R.id.LblSubTitulo);
-//				lblSubtitulo.setText(datos[position].getSubtitulo());
-								
+				final TextView lblSubtitulo = (TextView)item.findViewById(R.id.LblSubTitulo);
+				lblSubtitulo.setText(datos[position].getSubtitulo());
+				
 				item.setOnClickListener(new OnClickListener() {
 				    @Override
 				    public void onClick(View arg0) {
@@ -102,6 +103,7 @@ public class NoticiasMain extends Activity
 				        Bundle bundle = new Bundle();
 				        bundle.putString("TITULO", noticias.get(position).getTitulo());
 				        bundle.putString("NOTICIA", noticias.get(position).getDescripcion());
+				        bundle.putString("LINK", noticias.get(position).getLink());
 				        intent.putExtras(bundle);
 				 
 				        startActivity(intent);

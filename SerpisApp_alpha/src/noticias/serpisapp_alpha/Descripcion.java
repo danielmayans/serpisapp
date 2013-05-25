@@ -38,12 +38,13 @@ public class Descripcion extends Activity
 //	        		}
 	        	TextView titulo = (TextView)findViewById(R.id.LblTitulo);	        	
 				TextView descripcion = (TextView)findViewById(R.id.LblSubTitulo);
-				
+				TextView link = (TextView)findViewById(R.id.text_link);
 //				descripcion.setText(URLUtil.limpiarPagina(bundle.getString("NOTICIA")));
 				titulo.setText(bundle.getString("TITULO"));
 //				descripcion.setText(Html.fromHtml(bundle.getString("NOTICIA")), TextView.BufferType.SPANNABLE);
 				descripcion.setText(bundle.getString("NOTICIA"));
 				
+				link.setText(bundle.getString("LINK"));
 	    }
 	    public static class URLUtil {
 	    	public static String sacarPagina(String url) {

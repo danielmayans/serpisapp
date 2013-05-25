@@ -1,27 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:background="#5D5C5C"
+    android:orientation="vertical" >
 
-<RelativeLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  android:layout_width="wrap_content"
-  android:layout_height="wrap_content"
-  android:orientation="vertical"
-  android:background="@drawable/fondo">
-  
-	<TextView android:id="@+id/LblTitulo" 
-		android:layout_width="fill_parent" 
-		android:layout_height="wrap_content" 
-		android:textStyle="bold" 
-		android:textSize="16dp"
-		android:textColor="@color/turquesa" />
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:background="@layout/shape" >
 
-	<TextView
-	    android:id="@+id/LblSubTitulo"
-	    android:layout_width="fill_parent"
-	    android:layout_height="wrap_content"
-	    android:layout_alignParentLeft="true"
-	    android:layout_below="@+id/LblTitulo"
-	    android:textSize="12dp"
-	    android:textStyle="normal"
-	    android:textColor="@color/blanco" />
-	
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="70dip"
+            android:layout_marginTop="2dip"
+            android:gravity="center"
+            android:text="IES Serpis - NOTICIAS"
+            android:textColor="#FFFFFF"
+            android:textSize="8pt"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/linearLayout1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/LblTitulo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#F6B207"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/LblSubTitulo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout2"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/text_link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="5sp"
+            android:autoLink="web" />
+    </LinearLayout>
+
 </RelativeLayout>
