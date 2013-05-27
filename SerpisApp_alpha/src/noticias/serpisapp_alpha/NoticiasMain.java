@@ -46,23 +46,29 @@ public class NoticiasMain extends Activity
 			}
 		}
 		
-		RssParserSax saxparser = new RssParserSax("http://www.institutoserpis.org/feed/");
+		RssParserSax saxparser = new RssParserSax("http://ruvid.webs.upv.es/?cat=7&feed=rss2");
 		
 		final List<Noticia> noticias = saxparser.parse();
+		
 		Titular[] datos = new Titular[]{
 			new Titular(noticias.get(0).getTitulo(),noticias.get(0).getFecha()),
 			new Titular(noticias.get(1).getTitulo(),noticias.get(1).getFecha()),
 			new Titular(noticias.get(2).getTitulo(),noticias.get(2).getFecha()),
 			new Titular(noticias.get(3).getTitulo(),noticias.get(3).getFecha()),
 			new Titular(noticias.get(4).getTitulo(),noticias.get(4).getFecha()),
-			new Titular(noticias.get(5).getTitulo(),noticias.get(5).getFecha())};
+			new Titular(noticias.get(5).getTitulo(),noticias.get(5).getFecha()),
+			new Titular(noticias.get(6).getTitulo(),noticias.get(6).getFecha()),
+			new Titular(noticias.get(7).getTitulo(),noticias.get(7).getFecha())};
 		
 	    @Override
 	    public void onCreate(Bundle savedInstanceState) {
 	    	super.onCreate(savedInstanceState);
 	        setContentView(R.layout.noticias);
-	        
-			
+	        for(int position=0;position>8;position++){
+	        datos = new Titular[]{
+	        		new Titular(noticias.get(position).getTitulo(),noticias.get(position).getFecha())
+	        };
+	        }
 	        AdaptadorTitulares adaptador = 
 	        	new AdaptadorTitulares(this);
 	        

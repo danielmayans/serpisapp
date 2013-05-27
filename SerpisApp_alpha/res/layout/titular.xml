@@ -8,7 +8,6 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:textColor="#FFFFFF"
-		android:paddingTop="5dip"
 		android:paddingBottom="3dip"
 		android:paddingLeft="1dip"
 		android:paddingRight="8dip"
@@ -20,7 +19,6 @@
 		android:layout_height="wrap_content"
 		android:textColor="#F6B207"
 		android:textSize="10sp"
-		android:paddingTop="3dip"
 		android:paddingBottom="3dip"
 		android:paddingLeft="1dip"
 		android:paddingRight="8dip" />

@@ -2,35 +2,22 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="fill_parent"
-    android:background="#5D5C5C"
+    android:background="#202020"
     android:orientation="vertical" >
 
-    <LinearLayout
-        android:id="@+id/linearLayout1"
+    <ImageView
+        android:id="@+id/ImageView1"
         android:layout_width="fill_parent"
-        android:layout_height="40dip"
-        android:background="@layout/shape" >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="70dip"
-            android:layout_marginTop="2dip"
-            android:gravity="center"
-            android:text="IES Serpis - NOTICIAS"
-            android:textColor="#FFFFFF"
-            android:textSize="8pt"
-            android:textStyle="bold" />
-    </LinearLayout>
+        android:layout_height="wrap_content"
+        android:keepScreenOn="true"
+        android:src="@drawable/noticias" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/linearLayout1"
+        android:layout_below="@+id/ImageView1"
         android:orientation="vertical" >
 
         <TextView
@@ -61,8 +48,9 @@
             android:id="@+id/text_link"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="5sp"
-            android:autoLink="web" />
+            android:textSize="7sp"
+            android:autoLink="web"
+            android:textColorLink="@color/turquesa" />
     </LinearLayout>
 
 </RelativeLayout>

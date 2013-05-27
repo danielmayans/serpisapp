@@ -3,7 +3,7 @@
         android:id="@+id/tv"
         android:layout_width="wrap_content"
         android:layout_height="170dp"
-        android:background="@drawable/pattern_036">
+        android:background="#202020">
 
     <ImageView
         android:id="@+id/imageView1"

@@ -33,6 +33,7 @@
         <activity android:label="IES Serpis - Agenda" android:name="agenda.serpisapp_alpha.Agenda"></activity>
         <activity android:label="IES Serpis - Editar nota" android:name="agenda.serpisapp_alpha.NoteEdit"></activity>
         <activity android:label="IES Serpis - Notas" android:name="agenda.serpisapp_alpha.Notepad"></activity>
+        <activity android:label="IES Serpis - www.institutorserpis.org" android:name="noticias.serpisapp_alpha.WebActivity"></activity>
     </application>
 
 </manifest>

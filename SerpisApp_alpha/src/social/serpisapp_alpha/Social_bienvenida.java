@@ -17,9 +17,7 @@ import android.widget.TextView;
 
 public class Social_bienvenida extends Activity{
 	
-	private TextView t_tit;
-	private TextView t_subt;
-	private Button b_entrar;
+	private TextView b_entrar;
 	
 	
 	
@@ -31,12 +29,8 @@ public class Social_bienvenida extends Activity{
 		
 		Typeface face=Typeface.createFromAsset(getAssets(),"fonts/ByPeopleHandwritten.ttf");
 		
-		t_tit = (TextView)findViewById(R.id.texto_prueba);
-		t_subt = (TextView)findViewById(R.id.texto_prueba1);
-		t_tit.setTypeface(face);
-		t_subt.setTypeface(face);
-		
-		b_entrar = (Button)findViewById(R.id.b_entrar);
+		b_entrar = (TextView)findViewById(R.id.b_entrar);
+		b_entrar.setTypeface(face);
 		b_entrar.setOnClickListener(new OnClickListener() {
 			
 			@Override

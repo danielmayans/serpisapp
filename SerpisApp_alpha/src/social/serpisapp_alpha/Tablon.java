@@ -3,6 +3,7 @@ package social.serpisapp_alpha;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
@@ -14,17 +15,21 @@ import com.example.serpisapp_alpha.R;
 
 import android.app.ListActivity;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListAdapter;
@@ -177,10 +182,11 @@ public class Tablon extends ListActivity {
 					/**
 					 * Actualizando el ListView con la informacion del JSON
 					 * */
-					ListAdapter adapter = new SimpleAdapter(
+					SimpleAdapter adapter = new SimpleAdapter(
 							Tablon.this, listaMensajes,
 							R.layout.list_item, new String[] { TAG_PID,TAG_NAME,TAG_DESCRIPTION},
 							new int[] { R.id.pid, R.id.name, R.id.comentario });
+					
 
 					setListAdapter(adapter);
 				}
@@ -189,6 +195,8 @@ public class Tablon extends ListActivity {
 		}
 
 	}
+	
+	
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.menu_new_msj, menu);
 		return true;
@@ -202,9 +210,9 @@ public class Tablon extends ListActivity {
         	startActivity(intent);
         	break;
         case R.id.m_act_tablon:
-//        	Intent i = new Intent(getApplicationContext(), Tablon.class);
-//			finish();
-//			startActivity(i);
+        	Intent i = new Intent(getApplicationContext(), Tablon.class);
+			finish();
+			startActivity(i);
         	break;
     	}        
         return true;

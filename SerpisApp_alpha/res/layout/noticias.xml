@@ -2,33 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#5D5C5C"
+    android:background="#202020"
     android:orientation="vertical" >
-<LinearLayout 
-    android:layout_width="fill_parent"
-    android:background="@layout/shape"
-    android:layout_height="40dip"
-    >
-    
-    <TextView 
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:textColor="#FFFFFF"
-android:layout_marginTop="2dip"
-android:layout_marginLeft="70dip"
-android:gravity="center"
-android:textSize="8pt"
-android:textStyle="bold"
-android:layout_gravity="center"
-android:text="IES Serpis - NOTICIAS"
- />
-    
-</LinearLayout>
+<ImageView
+		    android:id="@+id/ImageView1"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:keepScreenOn="true"
+		    android:src="@drawable/noticias" />
   <ListView 
       android:layout_width="fill_parent"
       android:layout_height="390dip"
       android:id="@+id/ListNoticias"
-      android:background="#5D5C5C"
+      android:background="#202020"
       android:cacheColorHint="#00000000"
       android:divider="#000000"
       android:dividerHeight="1dip"
