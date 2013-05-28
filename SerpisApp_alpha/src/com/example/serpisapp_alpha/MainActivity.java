@@ -1,7 +1,9 @@
 package com.example.serpisapp_alpha;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
@@ -17,12 +19,15 @@ public class MainActivity extends FragmentActivity {
 	private ImageButton bNoticias;
 	private ImageButton bAgenda;
 	
+	public static String aux;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.principal);
+		SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
 		
+		MainActivity.aux = pref.getString("RSS", "http://www.institutoserpis.org/feed");
 		/**
 		 * SOCIAL
 		 */

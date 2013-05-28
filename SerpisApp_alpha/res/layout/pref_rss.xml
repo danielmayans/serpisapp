@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Centro de Noticias">
+        <ListPreference
+            android:key="RSS"
+            android:title="Que leer?"
+            android:summary="Lugares de interes"
+            android:dialogTitle="Que leer?"
+            android:entries="@array/rss_titulo"
+            android:entryValues="@array/rss_value" />
+    </PreferenceCategory>
+</PreferenceScreen>

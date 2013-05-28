@@ -10,6 +10,8 @@ package com.example.serpisapp_alpha;
 public final class R {
     public static final class array {
         public static final int cursos=0x7f070000;
+        public static final int rss_titulo=0x7f070001;
+        public static final int rss_value=0x7f070002;
     }
     public static final class attr {
     }
@@ -72,6 +74,7 @@ public final class R {
         public static final int linearLayout2=0x7f0b0009;
         public static final int m_act_tablon=0x7f0b002e;
         public static final int m_new_msj=0x7f0b002d;
+        public static final int m_rss=0x7f0b002f;
         public static final int name=0x7f0b000e;
         public static final int pager=0x7f0b0019;
         public static final int pager_tab_strip=0x7f0b001a;
@@ -107,16 +110,18 @@ public final class R {
         public static final int notes_list=0x7f030008;
         public static final int notes_row=0x7f030009;
         public static final int noticias=0x7f03000a;
-        public static final int principal=0x7f03000b;
-        public static final int secretaria=0x7f03000c;
-        public static final int shape=0x7f03000d;
-        public static final int social_bienvenida=0x7f03000e;
-        public static final int titular=0x7f03000f;
-        public static final int webview_lay=0x7f030010;
+        public static final int pref_rss=0x7f03000b;
+        public static final int principal=0x7f03000c;
+        public static final int secretaria=0x7f03000d;
+        public static final int shape=0x7f03000e;
+        public static final int social_bienvenida=0x7f03000f;
+        public static final int titular=0x7f030010;
+        public static final int webview_lay=0x7f030011;
     }
     public static final class menu {
         public static final int main=0x7f0a0000;
         public static final int menu_new_msj=0x7f0a0001;
+        public static final int menu_rss=0x7f0a0002;
     }
     public static final class raw {
         public static final int social1=0x7f040000;

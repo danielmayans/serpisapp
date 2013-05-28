@@ -2,7 +2,7 @@ package noticias.serpisapp_alpha;
 
 import java.util.List;
 
-
+import com.example.serpisapp_alpha.MainActivity;
 import com.example.serpisapp_alpha.R;
 
 import android.app.Activity;
@@ -10,17 +10,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.TextView;
 
 public class NoticiasMain extends Activity 
 {
-    
+	
+	
         //Tratamiento del array de noticias
 		public class Titular 
 		{
@@ -46,7 +48,7 @@ public class NoticiasMain extends Activity
 			}
 		}
 		
-		RssParserSax saxparser = new RssParserSax("http://ruvid.webs.upv.es/?cat=7&feed=rss2");
+		RssParserSax saxparser = new RssParserSax(MainActivity.aux);
 		
 		final List<Noticia> noticias = saxparser.parse();
 		
@@ -60,15 +62,13 @@ public class NoticiasMain extends Activity
 			new Titular(noticias.get(6).getTitulo(),noticias.get(6).getFecha()),
 			new Titular(noticias.get(7).getTitulo(),noticias.get(7).getFecha())};
 		
+
 	    @Override
 	    public void onCreate(Bundle savedInstanceState) {
 	    	super.onCreate(savedInstanceState);
-	        setContentView(R.layout.noticias);
-	        for(int position=0;position>8;position++){
-	        datos = new Titular[]{
-	        		new Titular(noticias.get(position).getTitulo(),noticias.get(position).getFecha())
-	        };
-	        }
+	        setContentView(R.layout.noticias);		
+			
+			
 	        AdaptadorTitulares adaptador = 
 	        	new AdaptadorTitulares(this);
 	        
@@ -129,4 +129,20 @@ public class NoticiasMain extends Activity
 		        }
 			 return false;
 		 }
+	    
+	    public boolean onCreateOptionsMenu(Menu menu) {
+			getMenuInflater().inflate(R.menu.menu_rss, menu);
+			return true;
+		}
+	    
+	    public boolean onOptionsItemSelected(MenuItem item) {
+	        switch (item.getItemId()) {
+	        case R.id.m_rss:
+	        	Intent intent = new Intent(getApplicationContext(), PreferenciasRss.class);
+	        	finish();
+	        	startActivity(intent);
+	        	break;
+	    	}        
+	        return true;
+	        }
  }

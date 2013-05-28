@@ -9,6 +9,24 @@
         <item>ASIR</item>
         <item>DAM</item>
     </string-array>
+    <string-array name="rss_titulo">
+        <item>IES Serpis</item>
+        <item>UPV - Actualidad</item>
+        <item>UPV - I+D+I</item>
+        <item>UPV - Proyectos</item>
+        <item>UPV - Agenda</item>
+        <item>UPV - Becas</item>
+        <item>UPV - Recomendados</item>
+    </string-array>
+    <string-array name="rss_value">
+        <item>http://www.institutoserpis.org/feed</item>
+        <item>http://ruvid.webs.upv.es/?cat=3&amp;feed=rss2</item>
+        <item>http://ruvid.webs.upv.es/?cat=4&amp;feed=rss2</item>
+        <item>http://ruvid.webs.upv.es/?cat=5&amp;feed=rss2</item>
+        <item>http://ruvid.webs.upv.es/?cat=6&amp;feed=rss2</item>
+        <item>http://ruvid.webs.upv.es/?cat=7&amp;feed=rss2</item>
+        <item>http://ruvid.webs.upv.es/?cat=13&amp;feed=rss2</item>
+    </string-array>
     <color name="blanco">#FFFFFF</color>
     <color name="turquesa">#7bb1bd</color>
 	<string name="hello">Hello World, AgendaFinalActivity!</string>
