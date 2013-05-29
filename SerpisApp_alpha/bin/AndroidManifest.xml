@@ -28,13 +28,13 @@
         <activity android:name="social.serpisapp_alpha.DetallesMensaje" android:label="IES Serpis - Social"></activity>
         <activity android:name="social.serpisapp_alpha.Social_inicio" android:label="IES Serpis - Social"></activity>
         <activity android:label="IES Serpis - Bienvenid@" android:name="social.serpisapp_alpha.Social_bienvenida"></activity>
-        <activity android:name="noticias.serpisapp_alpha.NoticiasMain" android:label="IES Serpis - Noticias"></activity>
-        <activity android:name="noticias.serpisapp_alpha.Descripcion" android:label="IES Serpis - Noticias"></activity>
         <activity android:label="IES Serpis - Agenda" android:name="agenda.serpisapp_alpha.Agenda"></activity>
         <activity android:label="IES Serpis - Editar nota" android:name="agenda.serpisapp_alpha.NoteEdit"></activity>
         <activity android:label="IES Serpis - Notas" android:name="agenda.serpisapp_alpha.Notepad"></activity>
         <activity android:label="IES Serpis - www.institutorserpis.org" android:name="noticias.serpisapp_alpha.WebActivity"></activity>
         <activity android:label="Elige una fuente de Noticias" android:name="noticias.serpisapp_alpha.PreferenciasRss"></activity>
+        <activity android:label="IES Serpis - Noticias" android:name="noticias.serpisapp_alpha.Noticias"></activity>
+        <activity android:label="IES Serpis - Noticias" android:name="noticias.serpisapp_alpha.DetallesNoticia"></activity>
     </application>
 
 </manifest>

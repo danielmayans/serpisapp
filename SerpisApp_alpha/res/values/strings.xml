@@ -36,6 +36,7 @@
 	<string name="TituloApp">Agenda</string>
 	<string name="no_notes">No hay notas almacenadas</string>
     <string name="menu_insert">Insertar Nota</string>
+    <string name="menu_evento">Añadir Evento</string>
     <string name="note_name"></string>
     <string name="body">Mensaje</string>
     <string name="confirm">OK</string>

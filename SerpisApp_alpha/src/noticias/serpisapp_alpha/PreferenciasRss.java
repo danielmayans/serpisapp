@@ -38,8 +38,8 @@ public class PreferenciasRss extends PreferenceActivity{
 		 
 		 if ((keyCode == KeyEvent.KEYCODE_BACK)) {
 			 SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(PreferenciasRss.this);
-			 MainActivity.aux = pref.getString("RSS", "");
-			 Intent i = new Intent(getApplicationContext(), noticias.serpisapp_alpha.NoticiasMain.class);
+			 MainActivity.static_rss = pref.getString("RSS", "");
+			 Intent i = new Intent(getApplicationContext(), noticias.serpisapp_alpha.Noticias.class);
 	         finish();
 	         startActivity(i);
 			 

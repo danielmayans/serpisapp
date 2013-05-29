@@ -19,7 +19,7 @@ public class MainActivity extends FragmentActivity {
 	private ImageButton bNoticias;
 	private ImageButton bAgenda;
 	
-	public static String aux;
+	public static String static_rss;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +27,7 @@ public class MainActivity extends FragmentActivity {
 		setContentView(R.layout.principal);
 		SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
 		
-		MainActivity.aux = pref.getString("RSS", "http://www.institutoserpis.org/feed");
+		MainActivity.static_rss = pref.getString("RSS", "http://www.institutoserpis.org/feed");
 		/**
 		 * SOCIAL
 		 */
@@ -50,7 +50,7 @@ public class MainActivity extends FragmentActivity {
 			
 			@Override
 			public void onClick(View arg0) {
-				Intent i = new Intent(getApplicationContext(), noticias.serpisapp_alpha.NoticiasMain.class);
+				Intent i = new Intent(getApplicationContext(), noticias.serpisapp_alpha.Noticias.class);
 				finish();
 				startActivity(i);
 				
