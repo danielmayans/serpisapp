@@ -28,13 +28,16 @@
         <activity android:name="social.serpisapp_alpha.DetallesMensaje" android:label="IES Serpis - Social"></activity>
         <activity android:name="social.serpisapp_alpha.Social_inicio" android:label="IES Serpis - Social"></activity>
         <activity android:label="IES Serpis - Bienvenid@" android:name="social.serpisapp_alpha.Social_bienvenida"></activity>
-        <activity android:label="IES Serpis - Agenda" android:name="agenda.serpisapp_alpha.Agenda"></activity>
         <activity android:label="IES Serpis - Editar nota" android:name="agenda.serpisapp_alpha.NoteEdit"></activity>
         <activity android:label="IES Serpis - Notas" android:name="agenda.serpisapp_alpha.Notepad"></activity>
         <activity android:label="IES Serpis - www.institutorserpis.org" android:name="noticias.serpisapp_alpha.WebActivity"></activity>
         <activity android:label="Elige una fuente de Noticias" android:name="noticias.serpisapp_alpha.PreferenciasRss"></activity>
         <activity android:label="IES Serpis - Noticias" android:name="noticias.serpisapp_alpha.Noticias"></activity>
         <activity android:label="IES Serpis - Noticias" android:name="noticias.serpisapp_alpha.DetallesNoticia"></activity>
+        <activity android:label="IES Serpis - Elige tu curso" android:name="social.serpisapp_alpha.PreferenciasSocial"></activity>
+        <activity android:label="IES Serpis - Agenda" android:name="agenda.serpisapp_alpha.Agenda"></activity>
+        <activity android:label="IES Serpis - Agenda" android:name="agenda.serpisapp_alpha.Edicion"></activity>
+        <activity android:label="IES Serpis - Nueva Nota" android:name="agenda.serpisapp_alpha.NuevaNota"></activity>
     </application>
 
 </manifest>

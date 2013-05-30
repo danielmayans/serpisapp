@@ -5,18 +5,18 @@
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     <string-array name="cursos">
-        <item>SMR</item>
         <item>ASIR</item>
         <item>DAM</item>
+        <item>SMR</item>
     </string-array>
     <string-array name="rss_titulo">
         <item>IES Serpis</item>
-        <item>UPV - Actualidad</item>
-        <item>UPV - I+D+I</item>
-        <item>UPV - Proyectos</item>
-        <item>UPV - Agenda</item>
-        <item>UPV - Becas</item>
-        <item>UPV - Recomendados</item>
+        <item>RUVID - Actualidad</item>
+        <item>RUVID - I+D+I</item>
+        <item>RUVID - Proyectos</item>
+        <item>RUVID - Agenda Cultural</item>
+        <item>RUVID - Becas</item>
+        <item>RUVID - Recomendados</item>
     </string-array>
     <string-array name="rss_value">
         <item>http://www.institutoserpis.org/feed</item>

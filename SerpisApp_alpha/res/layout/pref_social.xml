@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Central de Cursos">
+        <ListPreference
+            android:key="pref_curso"
+            android:title="Cambiar de curso!"
+            android:summary="Lee otro tablon de mensajes."
+            android:dialogTitle="Cambiar de curso!"
+            android:entries="@array/cursos"
+            android:entryValues="@array/cursos" />
+    </PreferenceCategory>
+</PreferenceScreen>

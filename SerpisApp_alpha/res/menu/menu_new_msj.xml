@@ -2,6 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
     <item android:id="@+id/m_new_msj" android:title="Nuevo Mensaje"></item>
     <item android:id="@+id/m_act_tablon" android:title="Actualizar"></item>
+    <item android:id="@+id/m_cambia_curso" android:title="Cambiar de Curso"></item>
     
 
 </menu>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/m_new_note" android:title="Nueva Nota" android:icon="@android:drawable/ic_menu_add"></item>
+    <item android:id="@+id/m_new_event" android:title="Nuevo Evento" android:icon="@android:drawable/ic_menu_today"></item>
+
+</menu>

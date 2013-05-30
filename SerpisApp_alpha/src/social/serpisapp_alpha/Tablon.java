@@ -19,9 +19,11 @@ import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
 public class Tablon extends ListActivity {
@@ -29,7 +31,8 @@ public class Tablon extends ListActivity {
 	
 	// Progress Dialog
 	private ProgressDialog pDialog;
-	
+	private String PREF_CURSO;
+	private int fondo_tablon;
 	// Creando el objeto JSON Parser
 	JSONParser jParser = new JSONParser();
 	JSONParser jsonParser = new JSONParser();
@@ -46,7 +49,6 @@ public class Tablon extends ListActivity {
 	private static final String TAG_DESCRIPTION = "mensaje";
 	private static final String TAG_NAME = "nombre";
 	private static final String TAG_APELLIDO1 = "ap1";
-	String curso;
 	// JSONArray
 	JSONArray messages = null;
 
@@ -55,6 +57,13 @@ public class Tablon extends ListActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.lay_tablon);
 		
+		SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(Tablon.this);
+		PREF_CURSO = pref.getString("pref_curso", "");
+		
+		if(PREF_CURSO.equals("DAM")){fondo_tablon = R.drawable.back_dam;}
+		else if(PREF_CURSO.equals("ASIR")){fondo_tablon = R.drawable.back_asir;}
+		else if(PREF_CURSO.equals("SMR")){fondo_tablon = R.drawable.back_smr;}
+		
 		// Hashmap para el ListView
 		listaMensajes = new ArrayList<HashMap<String, String>>();
 		
@@ -62,16 +71,7 @@ public class Tablon extends ListActivity {
 		new CargaMensajes().execute();
 
 	}
-	 public boolean onKeyDown(int keyCode, KeyEvent event) {
-		 
-		 if ((keyCode == KeyEvent.KEYCODE_BACK)) {                               
-	            Intent i = new Intent(getApplicationContext(), com.example.serpisapp_alpha.MainActivity.class);
-	            finish();
-	            startActivity(i); 
-	            
-	        }
-		 return false;
-	 }
+	 
 	// Response from Edit Product Activity
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -108,10 +108,10 @@ public class Tablon extends ListActivity {
 		 * Sacando los mensajes de la URL
 		 * */
 		protected String doInBackground(String... args) {
-			SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(Tablon.this);
 			
 			List<NameValuePair> params = new ArrayList<NameValuePair>();
-			params.add(new BasicNameValuePair("curso", pref.getString("pref_curso", "")));
+			params.add(new BasicNameValuePair("curso", PREF_CURSO));
+			
 			
 			
 			JSONObject json = jParser.makeHttpRequest(url_tablon, "GET", params);
@@ -174,7 +174,12 @@ public class Tablon extends ListActivity {
 							R.layout.list_item, new String[] { TAG_PID,TAG_NAME,TAG_DESCRIPTION},
 							new int[] { R.id.pid, R.id.name, R.id.comentario });
 					
-
+					
+					
+					ListView lv = getListView();
+				    lv.setCacheColorHint(0);
+				    lv.setBackgroundResource(fondo_tablon);
+				    
 					setListAdapter(adapter);
 				}
 			});
@@ -183,6 +188,16 @@ public class Tablon extends ListActivity {
 
 	}
 	
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		 
+		 if ((keyCode == KeyEvent.KEYCODE_BACK)) {                               
+	            Intent i = new Intent(getApplicationContext(), com.example.serpisapp_alpha.MainActivity.class);
+	            finish();
+	            startActivity(i); 
+	            
+	        }
+		 return false;
+	 }
 	
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.menu_new_msj, menu);
@@ -190,16 +205,23 @@ public class Tablon extends ListActivity {
 	}
 	
 	public boolean onOptionsItemSelected(MenuItem item) {
+		Intent intent;
         switch (item.getItemId()) {
         case R.id.m_new_msj:
-        	Intent intent = new Intent(getApplicationContext(), NuevoMensaje.class);
+        	intent = new Intent(getApplicationContext(), NuevoMensaje.class);
         	intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        	finish();
         	startActivity(intent);
         	break;
         case R.id.m_act_tablon:
-        	Intent i = new Intent(getApplicationContext(), Tablon.class);
+        	intent = new Intent(getApplicationContext(), Tablon.class);
 			finish();
-			startActivity(i);
+			startActivity(intent);
+        	break;
+        case R.id.m_cambia_curso:
+        	intent = new Intent(getApplicationContext(), PreferenciasSocial.class);
+			finish();
+			startActivity(intent);
         	break;
     	}        
         return true;
