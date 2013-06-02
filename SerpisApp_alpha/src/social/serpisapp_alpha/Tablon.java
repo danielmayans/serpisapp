@@ -3,6 +3,7 @@ package social.serpisapp_alpha;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
@@ -14,17 +15,26 @@ import com.example.serpisapp_alpha.R;
 
 import android.app.ListActivity;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v4.widget.SimpleCursorAdapter;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
 
 public class Tablon extends ListActivity {
 	
@@ -59,11 +69,11 @@ public class Tablon extends ListActivity {
 		
 		SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(Tablon.this);
 		PREF_CURSO = pref.getString("pref_curso", "");
-		
+		/*
 		if(PREF_CURSO.equals("DAM")){fondo_tablon = R.drawable.back_dam;}
 		else if(PREF_CURSO.equals("ASIR")){fondo_tablon = R.drawable.back_asir;}
 		else if(PREF_CURSO.equals("SMR")){fondo_tablon = R.drawable.back_smr;}
-		
+		*/
 		// Hashmap para el ListView
 		listaMensajes = new ArrayList<HashMap<String, String>>();
 		
@@ -175,19 +185,13 @@ public class Tablon extends ListActivity {
 							new int[] { R.id.pid, R.id.name, R.id.comentario });
 					
 					
-					
 					ListView lv = getListView();
 				    lv.setCacheColorHint(0);
-				    lv.setBackgroundResource(fondo_tablon);
-				    
 					setListAdapter(adapter);
-				}
+				}	
 			});
-
 		}
-
 	}
-	
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 		 
 		 if ((keyCode == KeyEvent.KEYCODE_BACK)) {                               
@@ -210,7 +214,6 @@ public class Tablon extends ListActivity {
         case R.id.m_new_msj:
         	intent = new Intent(getApplicationContext(), NuevoMensaje.class);
         	intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        	finish();
         	startActivity(intent);
         	break;
         case R.id.m_act_tablon:

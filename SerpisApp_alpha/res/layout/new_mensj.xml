@@ -22,7 +22,8 @@
 	    android:layout_margin="5dip"
 	    android:layout_marginBottom="15dip"
 	    android:lines="4"
-	    android:gravity="top"/>
+	    android:gravity="top"
+	    android:maxLength="140"/>
 	
 	<!-- Button Create Product -->
 	<Button android:id="@+id/btnNewMsj" 

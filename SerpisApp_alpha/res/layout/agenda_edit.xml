@@ -1,40 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/actualizar"
+    <TextView
+        android:id="@+id/text_informacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"
-        android:text="Actualizar" />
-	
+        android:text="Titulo" />
+
     <EditText
         android:id="@+id/nota_titulo"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="59dp" />
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:maxLength="50" >
 
-    <Button
-        android:id="@+id/borrar"
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/text_titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/actualizar"
-        android:layout_alignBottom="@+id/actualizar"
-        android:layout_alignParentRight="true"
-        android:text="Borrar" />
+        android:text="Descripcion" />
 
     <EditText
         android:id="@+id/edit_Descripcion"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/nota_titulo"
         android:ems="10"
-        android:inputType="textMultiLine" />
+        android:inputType="textMultiLine"
+        android:maxLength="140" />
 
-</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/actualizar"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="Actualizar" />
+
+        <Button
+            android:id="@+id/borrar"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="Borrar" />
+
+    </RelativeLayout>
+
+</LinearLayout>

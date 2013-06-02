@@ -33,13 +33,17 @@ public class MyFragment extends Fragment{
 			View v = inflater.inflate(R.layout.bienvenida, container,false);	
 			
 			Typeface face=Typeface.createFromAsset(getActivity().getAssets(),"fonts/ByPeopleHandwritten.ttf");
-			Typeface face_bold=Typeface.createFromAsset(getActivity().getAssets(),"fonts/ByPeopleBold.ttf");
 			
 			TextView t_titulo = (TextView) v.findViewById(R.id.text_titulo);
 			TextView t_subtitulo = (TextView) v.findViewById(R.id.text_subtitulo);
+			TextView t_info = (TextView)v.findViewById(R.id.text_informacion);
 			
-			t_titulo.setTypeface(face_bold);
+			
+						
+			t_titulo.setTypeface(face);
 			t_subtitulo.setTypeface(face);
+			t_info.setTypeface(face);
+			
 			
 			
 		return v;
@@ -47,18 +51,25 @@ public class MyFragment extends Fragment{
 			
 			View v = inflater.inflate(R.layout.secretaria, container,false);	
 			
-			Typeface face_bold=Typeface.createFromAsset(getActivity().getAssets(),"fonts/ByPeopleBold.ttf");
+			Typeface arial=Typeface.createFromAsset(getActivity().getAssets(),"fonts/arial.ttf");
 			
+			TextView t_face1 = (TextView) v.findViewById(R.id.textView1);
+			TextView t_telf1 = (TextView) v.findViewById(R.id.textView2);
+			TextView t_email1 = (TextView) v.findViewById(R.id.textView3);
+			TextView t_web1 = (TextView) v.findViewById(R.id.textView4);
+			TextView t_face2 = (TextView) v.findViewById(R.id.textView5);
+			TextView t_telf2 = (TextView) v.findViewById(R.id.TextView01);
+			TextView t_email2 = (TextView) v.findViewById(R.id.TextView02);
+			TextView t_web2 = (TextView) v.findViewById(R.id.TextView03);
 			
-			TextView titulo_facebook = (TextView)v.findViewById(R.id.textView6);
-			TextView titulo_telefono = (TextView)v.findViewById(R.id.textView7);
-			TextView titulo_email = (TextView)v.findViewById(R.id.textView8);
-			TextView titulo_web = (TextView)v.findViewById(R.id.textView9);
-			
-			titulo_facebook.setTypeface(face_bold);
-			titulo_telefono.setTypeface(face_bold);
-			titulo_email.setTypeface(face_bold);
-			titulo_web.setTypeface(face_bold);
+			t_face1.setTypeface(arial);
+			t_telf1.setTypeface(arial);
+			t_email1.setTypeface(arial);
+			t_web1.setTypeface(arial);
+			t_face2.setTypeface(arial);
+			t_telf2.setTypeface(arial);
+			t_email2.setTypeface(arial);
+			t_web2.setTypeface(arial);
 			
 		return v;} 		
 	}

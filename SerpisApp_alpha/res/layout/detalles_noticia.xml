@@ -3,23 +3,32 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#202020">
+    android:background="@drawable/fondo_completo">
     <ImageView
 		android:id="@+id/ImageView1"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:keepScreenOn="true"
-		android:src="@drawable/noticias" />    
+		android:src="@drawable/noticias" />
+    <LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="15dp">    
 	<TextView  
 	    android:layout_width="fill_parent" 
 	    android:layout_height="wrap_content" 
 	    android:id="@+id/detailstitle"
-	    android:textColor="#FF8000" />
+	    android:textColor="#025d6d"
+	    android:shadowColor="#025d6d"
+        android:shadowRadius="0.5"
+        android:shadowDx="0.5"
+        android:shadowDy="0.5" />
 	<TextView  
 	    android:layout_width="fill_parent" 
 	    android:layout_height="wrap_content" 
 	    android:id="@+id/detailsdescription"
-	    android:textColor="#FFBF00" />
+	    android:textColor="#02334c" />
 	<TextView  
 	    android:layout_width="fill_parent" 
 	    android:layout_height="wrap_content" 
@@ -30,5 +39,6 @@
 	    android:layout_width="fill_parent" 
 	    android:layout_height="wrap_content" 
 	    android:id="@+id/detailspubdate"
-	    android:textColor="#F6B207" />
+	    android:textColor="#02334c" />
+	</LinearLayout>
 </LinearLayout>

@@ -3,26 +3,25 @@
     android:id="@+id/LinearLayout1"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#202020"
+    android:background="@drawable/fondo_completo"
     android:orientation="vertical" >
 
     <ImageView
         android:id="@+id/imageView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:keepScreenOn="true"
         android:src="@drawable/agenda" />
-
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-30dp"/>
     <TextView
         android:id="@android:id/empty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/no_notes"
-        android:textColor="@color/turquesa" />
-
-    <ListView
-        android:id="@android:id/list"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
-    </ListView>
+        android:textColor="#025d6d"/>
 
 </LinearLayout>

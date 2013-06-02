@@ -5,38 +5,40 @@
     android:orientation="vertical" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/text_informacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Titulo" />
 
     <EditText
         android:id="@+id/new_titulo"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName" >
+        android:inputType="textPersonName"
+        android:maxLength="50" >
 
         <requestFocus />
     </EditText>
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/text_titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Descripcion" />
 
     <EditText
         android:id="@+id/new_descripcion"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textMultiLine" />
+        android:inputType="textMultiLine"
+        android:maxLength="140" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/b_new_nota"

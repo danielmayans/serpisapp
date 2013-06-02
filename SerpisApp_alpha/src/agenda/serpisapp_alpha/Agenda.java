@@ -41,6 +41,7 @@ public class Agenda extends ListActivity {
 		Cursor cursor = db.query("Notas", columnas, null, null, null, null,null);
 		cursorAdapter = new SimpleCursorAdapter(this, R.layout.agenda_filas, cursor, columnas,new int[] { R.id.nota_titulo });
 		final ListView listaAlumnos = getListView();
+		listaAlumnos.setCacheColorHint(0);
 		listaAlumnos.addHeaderView(getLayoutInflater().inflate(R.layout.agenda_filas, null));
 		listaAlumnos.setOnItemClickListener(new OnItemClickListener() {
 	
@@ -59,7 +60,6 @@ public class Agenda extends ListActivity {
 				startActivity(intent);				
 				}
 			});
-			
 			setListAdapter(cursorAdapter);
 		}
 	

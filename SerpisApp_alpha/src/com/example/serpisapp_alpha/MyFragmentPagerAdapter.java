@@ -28,13 +28,6 @@ public class MyFragmentPagerAdapter extends FragmentPagerAdapter{
 		return PAGE_COUNT;
 	}
 	
-	@Override
-	public CharSequence getPageTitle(int position) {		
-		if(position==0){
-		return "Bienvenido";
-		}else{ return "Secretaria";}
- 
-	}
 	
 	
 	

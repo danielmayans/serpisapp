@@ -29,19 +29,9 @@
     </string-array>
     <color name="blanco">#FFFFFF</color>
     <color name="turquesa">#7bb1bd</color>
-	<string name="hello">Hello World, AgendaFinalActivity!</string>
-    <string name="Evento_Calendario"> Añadir Evento</string>
 	<string name="Listado">Añadir Nota</string>
 	<string name="AcercaDe">Acerca De</string>
-	<string name="TituloApp">Agenda</string>
 	<string name="no_notes">No hay notas almacenadas</string>
     <string name="menu_insert">Insertar Nota</string>
     <string name="menu_evento">Añadir Evento</string>
-    <string name="note_name"></string>
-    <string name="body">Mensaje</string>
-    <string name="confirm">OK</string>
-    <string name="title">Titulo</string>
-    <string name="menu_delete">Borrar nota</string>
-    <string name="edit_note">Modificar nota</string>
-    <string name="listado_calendario">Listado Calendario</string>
 </resources>

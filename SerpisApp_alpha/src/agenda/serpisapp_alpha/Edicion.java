@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -62,4 +63,14 @@ public class Edicion extends Activity {
         nota_Titulo.setText(b_nombre);
         edit_Descripcion.setText(b_edad);
     }
+    
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+		 
+		 if ((keyCode == KeyEvent.KEYCODE_BACK)) {
+			 Intent intent = new Intent(getApplicationContext(),Agenda.class);
+			 finish();
+			 startActivity(intent);
+	        }
+		 return false;
+	 }
 }

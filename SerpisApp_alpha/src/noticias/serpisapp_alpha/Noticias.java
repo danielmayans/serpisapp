@@ -102,15 +102,6 @@ public class Noticias extends ListActivity {
 			listTitle.setText(myRssFeed.getList().get(position).getTitle());
 			TextView listPubdate=(TextView)row.findViewById(R.id.listpubdate);
 			listPubdate.setText(myRssFeed.getList().get(position).getPubdate());
-
-//			if (position%2 == 0){
-//				listTitle.setBackgroundColor(0xff101010);
-//				listPubdate.setBackgroundColor(0xff101010);
-//			}
-//			else{
-//				listTitle.setBackgroundColor(0xff080808);
-//				listPubdate.setBackgroundColor(0xff080808);
-//			}
 			
 			return row;
 		}
@@ -123,7 +114,7 @@ public class Noticias extends ListActivity {
         setContentView(R.layout.noticias);
                 
 		feedTitle = (TextView)findViewById(R.id.feedtitle);
-		feedDescribtion = (TextView)findViewById(R.id.feeddescribtion);
+		feedDescribtion = (TextView)findViewById(R.id.feeddesc);
 		feedLink = (TextView)findViewById(R.id.feedlink);
         
         startReadRss();
@@ -176,10 +167,10 @@ public class Noticias extends ListActivity {
 		if (myRssFeed!=null)
 		{
 			Calendar c = Calendar.getInstance();
-		    String str_horaActual =  "\n(Ultima lectura - "
-		    						+ c.get(Calendar.HOUR_OF_DAY) 
-		    						+ ":"
-		    						+ c.get(Calendar.MINUTE) + ")\n";
+			int hrs = c.get(Calendar.HOUR_OF_DAY);
+			int mnts = c.get(Calendar.MINUTE);
+			String horaActual = String.format("%02d:%02d", hrs, mnts);
+		    String str_horaActual =  " · (Ultima lectura - "+horaActual+")";
 
 			feedTitle.setText(myRssFeed.getTitle() + str_horaActual);
 			feedDescribtion.setText(myRssFeed.getDescription());

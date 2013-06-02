@@ -19,7 +19,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textSize="12dip" />
+        android:textSize="12dip"
+        android:shadowColor="#025d6d"
+        android:shadowRadius="1.5"
+        android:shadowDx="1"
+        android:shadowDy="2" />
 
     <TextView
         android:id="@+id/comentario"
@@ -29,7 +33,8 @@
         android:paddingLeft="10dip"
         android:paddingTop="6dip"
         android:textSize="17dip"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:typeface="monospace" />
 
 
 </RelativeLayout>

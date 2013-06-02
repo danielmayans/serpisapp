@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#202020"
+    android:background="@drawable/fondo_completo"
     android:orientation="vertical" >
 
     <ImageView
@@ -19,7 +19,7 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:text="ENTRAR"
-        android:textColor="@color/turquesa"
+        android:textColor="#025d6d"
         android:textSize="80sp" />
 
 </RelativeLayout>
