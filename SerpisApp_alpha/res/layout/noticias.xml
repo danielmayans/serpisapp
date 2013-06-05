@@ -34,12 +34,19 @@
 	    android:textColorLink="@color/turquesa"
 	    android:id="@+id/feedlink" />
 
-	<ImageView
-	    android:id="@+id/imageView2"
-	    android:layout_width="fill_parent"
-	    android:layout_height="wrap_content"
-	    android:scaleType="fitXY"
-	    android:src="@android:drawable/button_onoff_indicator_off" />
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" >
+
+		<TextView
+		    android:id="@+id/TextView1"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentTop="true"
+		    android:layout_centerHorizontal="true"
+		    android:text="· · ·" />
+
+	</RelativeLayout>
 
 	</LinearLayout>
 	<ListView

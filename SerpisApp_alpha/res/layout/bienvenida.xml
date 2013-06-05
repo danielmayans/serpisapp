@@ -33,11 +33,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/text_titulo"
-        android:layout_alignParentLeft="true"
-        android:paddingTop="-28dp"
-        android:layout_marginLeft="30dp"
+        android:layout_centerHorizontal="true"
         android:text="CENTRO DE ENSEÑANZA SECUNDARIA"
-        android:textSize="25sp"
-        android:textColor="#025d6d" />
+        android:textColor="#025d6d"
+        android:textSize="25sp" />
 
 </RelativeLayout>

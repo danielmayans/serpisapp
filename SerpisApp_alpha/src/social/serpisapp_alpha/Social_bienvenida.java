@@ -33,7 +33,7 @@ public class Social_bienvenida extends Activity{
 			
 			@Override
 			public void onClick(View v) {
-				if(pref.getString("pref_nombre", "")==""){
+				if(pref.getString("pref_nombre", "")=="" || pref.getString("pref_curso", "")==""){
 					Intent i = new Intent(getApplicationContext(), social.serpisapp_alpha.Social_inicio.class);
 					finish();
 					startActivity(i);

@@ -21,11 +21,13 @@ import android.preference.PreferenceManager;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
 public class Tablon extends ListActivity {
 	
+	private int tablonHead;
 	
 	// Progress Dialog
 	private ProgressDialog pDialog;
@@ -56,11 +58,14 @@ public class Tablon extends ListActivity {
 		
 		SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(Tablon.this);
 		PREF_CURSO = pref.getString("pref_curso", "");
-		/*
-		if(PREF_CURSO.equals("DAM")){fondo_tablon = R.drawable.back_dam;}
-		else if(PREF_CURSO.equals("ASIR")){fondo_tablon = R.drawable.back_asir;}
-		else if(PREF_CURSO.equals("SMR")){fondo_tablon = R.drawable.back_smr;}
-		*/
+		
+		if(PREF_CURSO.equals("DAM")){tablonHead = R.drawable.dam_tit;}
+		else if(PREF_CURSO.equals("ASIR")){tablonHead = R.drawable.asir_tit;}
+		else if(PREF_CURSO.equals("SMR")){tablonHead = R.drawable.smr_tit;}
+		
+		ImageView tablonHeader = (ImageView)findViewById(R.id.imageView1);
+		tablonHeader.setImageResource(tablonHead);
+		
 		// Hashmap para el ListView
 		listaMensajes = new ArrayList<HashMap<String, String>>();
 		
