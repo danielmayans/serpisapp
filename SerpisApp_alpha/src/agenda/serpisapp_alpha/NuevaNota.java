@@ -1,6 +1,5 @@
 package agenda.serpisapp_alpha;
 
-import com.example.serpisapp_alpha.MainActivity;
 import com.example.serpisapp_alpha.R;
 
 import android.app.Activity;

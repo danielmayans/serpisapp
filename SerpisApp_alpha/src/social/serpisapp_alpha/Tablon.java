@@ -3,8 +3,6 @@ package social.serpisapp_alpha;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
@@ -15,26 +13,16 @@ import com.example.serpisapp_alpha.R;
 
 import android.app.ListActivity;
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.database.Cursor;
-import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.v4.widget.SimpleCursorAdapter;
-import android.util.Log;
 import android.view.KeyEvent;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
-import android.widget.TextView;
 
 public class Tablon extends ListActivity {
 	
@@ -42,7 +30,6 @@ public class Tablon extends ListActivity {
 	// Progress Dialog
 	private ProgressDialog pDialog;
 	private String PREF_CURSO;
-	private int fondo_tablon;
 	// Creando el objeto JSON Parser
 	JSONParser jParser = new JSONParser();
 	JSONParser jsonParser = new JSONParser();

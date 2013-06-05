@@ -1,6 +1,5 @@
 package noticias.serpisapp_alpha;
 
-import social.serpisapp_alpha.Social_inicio;
 
 import com.example.serpisapp_alpha.MainActivity;
 import com.example.serpisapp_alpha.R;
@@ -10,7 +9,6 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
-import android.util.Log;
 import android.view.KeyEvent;
 
 public class PreferenciasRss extends PreferenceActivity{
