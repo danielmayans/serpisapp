@@ -51,7 +51,7 @@ public class NuevoMensaje extends Activity {
 
 			@Override
 			public void onClick(View view) {
-				new CreateNewProduct().execute();
+				new CrearMensaje().execute();
 			}
 		});
 	}
@@ -59,7 +59,7 @@ public class NuevoMensaje extends Activity {
 	/**
 	 * Background Async Task
 	 * */
-	class CreateNewProduct extends AsyncTask<String, String, String> {
+	class CrearMensaje extends AsyncTask<String, String, String> {
 
 		/**
 		 * Progress Dialog

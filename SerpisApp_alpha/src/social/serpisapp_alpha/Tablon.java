@@ -74,20 +74,6 @@ public class Tablon extends ListActivity {
 
 	}
 	 
-	// Response from Edit Product Activity
-	@Override
-	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		super.onActivityResult(requestCode, resultCode, data);
-		
-		if (resultCode == 100) {
-			// Al recibir el codigo, recarga la lista de mensajes
-			Intent intent = getIntent();
-			finish();
-			startActivity(intent);
-		}
-
-	}
-
 	/**
 	 * Background Async Task
 	 * */

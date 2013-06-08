@@ -16,7 +16,7 @@ public class Social_inicio extends PreferenceActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.layout.alert_register_layout);
+        addPreferencesFromResource(R.layout.social_registro);
         
         
     }
@@ -26,12 +26,12 @@ public class Social_inicio extends PreferenceActivity {
 		 if ((keyCode == KeyEvent.KEYCODE_BACK)) {
 			 SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(Social_inicio.this);
 			 if(pref.getString("pref_nombre", "")==""){
-				 Intent i = new Intent(getApplicationContext(), com.example.serpisapp_alpha.MainActivity.class);
+				 Intent i = new Intent(getApplicationContext(), social.serpisapp_alpha.Social_bienvenida.class);
 				 Toast.makeText(getBaseContext(), "Debes introducir un Nombre!", Toast.LENGTH_LONG).show();
 		         finish();
 		         startActivity(i); 
 			 }else if(pref.getString("pref_curso", "")==""){
-				 Intent i = new Intent(getApplicationContext(), com.example.serpisapp_alpha.MainActivity.class);
+				 Intent i = new Intent(getApplicationContext(), social.serpisapp_alpha.Social_bienvenida.class);
 				 Toast.makeText(getBaseContext(), "Debes elegir un Curso!", Toast.LENGTH_LONG).show();
 				 finish();
 		         startActivity(i);
