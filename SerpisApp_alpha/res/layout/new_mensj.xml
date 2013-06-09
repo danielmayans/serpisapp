@@ -4,8 +4,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
     
-        
-    <!-- Input Name -->
 	<TextView android:id="@+id/text_alum"
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
@@ -13,8 +11,6 @@
 	    android:layout_marginBottom="15dip"
 	    android:singleLine="true"/>
 	
-	
-    <!-- Input description -->
 	<EditText android:id="@+id/input_msj"
 	    android:hint="Escribe tu mensaje"
 	    android:layout_width="fill_parent"
@@ -25,7 +21,6 @@
 	    android:gravity="top"
 	    android:maxLength="140"/>
 	
-	<!-- Button Create Product -->
 	<Button android:id="@+id/btnNewMsj" 
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"

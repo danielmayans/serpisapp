@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">SerpisApp_alpha</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Desarrollado por: Daniel Mayans Ballesteros</string>
     <string name="hello_world">Hello world!</string>
     <string-array name="cursos">
         <item>ASIR</item>
